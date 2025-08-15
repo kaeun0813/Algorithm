@@ -1,3 +1,5 @@
+#처음 코드
+"""
 def solution(slice, n):
 
     if slice < n:
@@ -7,3 +9,8 @@ def solution(slice, n):
             return n//slice+1
     else: 
         return 1
+"""
+#개선
+
+def solution(slice, n):
+    return ((n - 1) // slice) + 1
