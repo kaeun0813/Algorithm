@@ -1,0 +1,14 @@
+def is_prime(x):
+    if x <= 1:
+        return False
+    for i in range(2, int(x**0.5)+1):
+        if x % i == 0:
+            return False
+    return True
+
+def solution(n):
+    count = 0
+    for i in range(4, n+1):
+        if not is_prime(i):   # 소수가 아니면 합성수
+            count += 1
+    return count
