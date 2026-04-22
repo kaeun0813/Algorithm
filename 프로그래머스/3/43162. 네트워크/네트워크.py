@@ -5,17 +5,14 @@ def solution(n, computers):
             if computers[i][j]==1:
                 graph[i].append(j)
     def dfs(node,visited):
-        cnt=1
         visited[node]=True
         for nxt in graph[node]:
             if visited[nxt]:
                 continue
-            dfs(nxt,visited)
-        return cnt
-        
+            dfs(nxt,visited)       
                 
-    visited=[False]*(n+1)    
-    cnt=dfs(0,visited)
+    visited=[False]*(n)    
+    cnt=0
     for i in range(n):
         if not visited[i]:
             dfs(i,visited)
